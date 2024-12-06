@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="{{url_for('static', filename= 'css/style.css') }}">
+
+</head>
+<body>
+<h1>Хотите добавить пост?</h1>
+<form action="/add_post/">
+    <input type="submit" value="Add">
+</form>
+{% for i in a %}
+<h2> {{i.0}} - <a href="/detail/{{i.0}}"> {{i.1}}</a></h2>
+<p><img id="post" src="{{i.2}}" alt="new_post"></p>
+{% endfor %}
+</body>
+</html>
